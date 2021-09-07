@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".QuizActivity"
+    android:background="#FFFFFF"
+    >
+    <TextView
+        android:id="@+id/Quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:paddingLeft="20dp"
+        android:text="Quiz!"
+        android:textColor="#474747"
+        android:textSize="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:shadowColor="#989898"
+        android:shadowDx="6"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        />
+
+    <TextView
+        android:id="@+id/question_view"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:text="아무 버튼을 클릭하여 시작하세요!"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:backgroundTint="#DDDDDD"
+        app:layout_constraintTop_toBottomOf="@+id/Quiz"
+        app:layout_constraintBottom_toTopOf="@id/result"
+        />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="맞춘 문제 0개 / 틀린 횟수 0개"
+        android:textSize="15dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="@id/grid"
+        app:layout_constraintEnd_toStartOf="@id/btn_quiz_save"
+        app:layout_constraintBottom_toTopOf="@id/grid"
+        />
+        <Button
+            android:id="@+id/btn_quiz_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="문제 저장"
+            app:layout_constraintTop_toTopOf="@id/result"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/result"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#00FFFFFF"
+            />
+
+
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:rowCount="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="50dp">
+
+
+        <Button
+            android:id="@+id/example_1"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/stroke_button"
+            />
+
+        <Button
+            android:id="@+id/example_2"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/stroke_button"
+            android:text="" />
+
+        <Button
+            android:id="@+id/example_3"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/stroke_button"
+            android:text="" />
+
+        <Button
+            android:id="@+id/example_4"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/stroke_button"
+            android:text="" />
+
+
+    </GridLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

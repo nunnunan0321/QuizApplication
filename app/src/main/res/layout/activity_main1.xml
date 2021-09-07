@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity1"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#878787"
+        android:shadowDy="3"
+        android:shadowRadius="6"
+        android:textStyle="normal"
+        android:textSize="50sp"
+        android:textColor="#525252"
+        tools:text="Quiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/txt_main_title"
+        android:layout_marginBottom="15dp"
+        />
+
+
+    <TextView
+        android:id="@+id/txt_main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="신나는 문제 맞추기!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        />
+
+    <Button
+        android:id="@+id/btn_main_goquiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/txt_main_title"
+        android:background="@drawable/stroke_button"
+        android:layout_marginHorizontal="30dp"
+        android:text="문제 맞추러 가기"
+        />
+    <Button
+        android:id="@+id/btn_main_collection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_main_goquiz"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/stroke_button"
+        android:layout_marginHorizontal="30dp"
+        android:text="저장한 문제 보기"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
